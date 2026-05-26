@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --color-paper: #fffdf6;
+  --color-paper-deep: #f5edda;
+  --color-ink: #1f2933;
+  --color-club-green: #376b52;
+  --color-club-blue: #2f5e83;
+  --color-club-coral: #b85c4a;
+  --color-notebook-rule: rgba(47, 94, 131, 0.08);
+  --color-paper-shadow: rgba(31, 41, 51, 0.18);
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-paper-deep: var(--color-paper-deep);
+  --color-ink: var(--color-ink);
+  --color-club-green: var(--color-club-green);
+  --color-club-blue: var(--color-club-blue);
+  --color-club-coral: var(--color-club-coral);
+  --color-notebook-rule: var(--color-notebook-rule);
+  --color-paper-shadow: var(--color-paper-shadow);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  min-height: 100svh;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}

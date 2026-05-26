@@ -1,0 +1,12 @@
+officer:
+  enabled: false
+  label: Officer Applications
+  url: https://example.com
+project:
+  enabled: false
+  label: Project Applications
+  url: https://example.com
+member:
+  enabled: true
+  label: Member Interest Form
+  url: https://example.com

@@ -1,0 +1,9 @@
+name: Example Officer
+role: President
+order: 1
+major: Biology
+year: Junior
+image: https://pub-example.r2.dev/officers/example-president.jpg
+email: officer@example.com
+linkedin: https://www.linkedin.com/
+bio: Interested in biotechnology, student research, and building a welcoming club community.
