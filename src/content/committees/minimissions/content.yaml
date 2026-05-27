@@ -1,4 +1,10 @@
 name: MiniMissions
 enabled: true
-summary: Short, focused club missions for members who want hands-on biotechnology experience.
-links: []
+hero:
+  eyebrow: Division
+  title: MiniMissions
+  summary: Short, focused club missions for members who want hands-on biotechnology experience.
+  cta:
+    label: Get Involved
+    href: /contact
+  links: []

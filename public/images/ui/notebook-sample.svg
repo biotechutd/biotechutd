@@ -1,0 +1,11 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1100" fill="#F5EDDA"/>
+  <path d="M0 120H900M0 220H900M0 320H900M0 420H900M0 520H900M0 620H900M0 720H900M0 820H900M0 920H900M0 1020H900" stroke="#2F5E83" stroke-opacity=".16" stroke-width="4"/>
+  <circle cx="450" cy="430" r="210" fill="#376B52" fill-opacity=".18"/>
+  <path d="M286 520C320 430 377 385 458 385C536 385 593 430 628 520" stroke="#1F2933" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="370" cy="370" r="48" fill="#2F5E83"/>
+  <circle cx="532" cy="370" r="48" fill="#B85C4A"/>
+  <path d="M250 674H650" stroke="#1F2933" stroke-width="24" stroke-linecap="round"/>
+  <path d="M300 742H600" stroke="#1F2933" stroke-width="16" stroke-linecap="round" stroke-opacity=".5"/>
+  <text x="450" y="865" text-anchor="middle" fill="#1F2933" font-family="Comic Sans MS, cursive" font-size="52" font-weight="700">Biotech UTD</text>
+</svg>

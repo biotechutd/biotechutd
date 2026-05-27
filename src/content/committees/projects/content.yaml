@@ -1,4 +1,28 @@
 name: Projects
 enabled: true
-summary: Longer-running technical and research-inspired projects for club members.
-links: []
+hero:
+  eyebrow: Division
+  title: Projects
+  summary: Projects are semester long and could potentially extend! Applications will be available at the beginning of each semester. We encourage all majors to apply and the projects are open to undergraduate and graduate students! Make sure to look at the detailed project descriptions below.
+  projectDescription:
+    label: Project Description
+    href: https://example.com
+projects:
+  - companyName: Adilabs
+    projectName: ""
+    description: Rare disease care is often fragmented and reactive, leaving clinicians without visibility into disease progression, therapy response, or safety. Adilabs addresses this by giving clinicians a comprehensive view to enable timely, informed intervention.
+  - companyName: Sapiens Labs
+    projectName: ""
+    description: Sapien Labs is seeking two research interns (full stack developers) to assist with the development of a lightweight web/app-based prototype.
+  - companyName: Colossal
+    projectName: ""
+    description: This project focuses on enhancing a biomedical knowledge graph and LLM-powered chatbot to improve biological knowledge discovery. The system is extended and evaluated using Neo4j-based graph construction and structured testing.
+  - companyName: Nesteva
+    projectName: ""
+    description: Nestéva is a maternal health technology concept aimed at improving pregnancy and postpartum outcomes through a wearable-enabled digital platform. This project focuses on researching and prototyping a system that identifies and evaluates maternal biomarkers for continuous wearable-based monitoring.
+  - companyName: Cosnetix
+    projectName: ""
+    description: Modern skincare recommendations rarely account for the unique microbial ecosystems of individual skin. Cosnetix addresses this gap by building a foundational microbiota database and a proof-of-concept system that integrates microbial insights to enhance personalized skincare.
+  - companyName: Omnispectra
+    projectName: ""
+    description: PFAS are persistent environmental contaminants typically detected using invasive, costly laboratory techniques. This project investigates the feasibility of RF sensing to detect PFAS and selected precursors by correlating RF dielectric and resonant signatures with PFAS presence and concentration.

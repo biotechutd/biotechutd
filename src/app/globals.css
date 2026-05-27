@@ -1,14 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --color-paper: #fffdf6;
-  --color-paper-deep: #f5edda;
-  --color-ink: #1f2933;
-  --color-club-green: #376b52;
-  --color-club-blue: #2f5e83;
-  --color-club-coral: #b85c4a;
-  --color-notebook-rule: rgba(47, 94, 131, 0.08);
-  --color-paper-shadow: rgba(31, 41, 51, 0.18);
+  --color-paper: #f9fafb;
+  --color-paper-deep: #fffefc;
+  --color-ink: #111111;
+  --color-club-green: #16a34a;
+  --color-club-blue: #3b82f6;
+  --color-club-blue-deep: #2563eb;
+  --color-club-coral: #f97316;
+  --color-accent: var(--color-club-blue);
+  --color-accent-deep: var(--color-club-blue-deep);
+  --color-margin-red: #ef4444;
+  --color-tape: rgba(255, 255, 200, 0.76);
+  --color-tape-border: rgba(0, 0, 0, 0.1);
+  --color-notebook-rule: #d1d5db;
+  --color-paper-shadow: #9ca3af;
+  --gradient-navbar: linear-gradient(135deg, var(--color-accent), var(--color-accent-deep));
+  --gradient-accent-bubble: linear-gradient(
+      color-mix(in srgb, var(--color-accent) 15%, transparent),
+      color-mix(in srgb, var(--color-accent) 15%, transparent)
+    ),
+    var(--color-paper);
+  --gradient-accent-bubble-hover: linear-gradient(
+      color-mix(in srgb, var(--color-accent) 25%, transparent),
+      color-mix(in srgb, var(--color-accent) 25%, transparent)
+    ),
+    var(--color-paper);
+}
+
+[data-theme="philantropy"] {
+  --color-accent: var(--color-club-green);
+  --color-accent-deep: #15803d;
+  --gradient-navbar: linear-gradient(135deg, var(--color-club-green), #15803d);
+}
+
+[data-theme="minimissions"] {
+  --color-accent: #f59e0b;
+  --color-accent-deep: #d97706;
+  --gradient-navbar: linear-gradient(135deg, #f59e0b, #d97706);
 }
 
 @theme inline {
@@ -17,7 +46,13 @@
   --color-ink: var(--color-ink);
   --color-club-green: var(--color-club-green);
   --color-club-blue: var(--color-club-blue);
+  --color-club-blue-deep: var(--color-club-blue-deep);
   --color-club-coral: var(--color-club-coral);
+  --color-accent: var(--color-accent);
+  --color-accent-deep: var(--color-accent-deep);
+  --color-margin-red: var(--color-margin-red);
+  --color-tape: var(--color-tape);
+  --color-tape-border: var(--color-tape-border);
   --color-notebook-rule: var(--color-notebook-rule);
   --color-paper-shadow: var(--color-paper-shadow);
 }
@@ -29,11 +64,13 @@
 html {
   background: var(--color-paper);
   color: var(--color-ink);
+  font-size: 90%;
 }
 
 body {
   min-height: 100svh;
   margin: 0;
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", cursive, sans-serif;
 }
 
 a {

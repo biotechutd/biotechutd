@@ -1,4 +1,10 @@
 name: Philantropy
 enabled: true
-summary: Community-focused initiatives, outreach, and service opportunities.
-links: []
+hero:
+  eyebrow: Division
+  title: Philantropy
+  summary: Community-focused initiatives, outreach, and service opportunities.
+  cta:
+    label: Get Involved
+    href: /contact
+  links: []

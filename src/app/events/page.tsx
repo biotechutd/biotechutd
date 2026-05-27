@@ -1,13 +1,13 @@
 import { NotebookPage } from "@/components/notebook/NotebookPage";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { EventsLayout } from "@/components/sections/EventsLayout";
+import { getEventsContent } from "@/lib/content/getEventsContent";
 
-export default function EventsPage() {
+export default async function EventsPage() {
+  const content = await getEventsContent();
+
   return (
     <NotebookPage>
-      <main className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Notebook" title="Events" />
-        <p className="mt-4 text-ink/75">Event notes and gallery previews will be built here.</p>
-      </main>
+      <EventsLayout events={content.upcoming} />
     </NotebookPage>
   );
 }
