@@ -1,4 +1,5 @@
 type Env = {
+  ASSETS: Fetcher;
   DISCORD_WEBHOOK_URL?: string;
   GOOGLE_SERVICE_ACCOUNT_EMAIL?: string;
   GOOGLE_PRIVATE_KEY?: string;
@@ -17,9 +18,27 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "Content-Type"
 };
 
-export const onRequestOptions: PagesFunction<Env> = async () => new Response(null, { status: 204, headers: corsHeaders });
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
 
-export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
+    if (url.pathname === "/api/contact") {
+      return handleContactRequest(request, env);
+    }
+
+    return env.ASSETS.fetch(request);
+  }
+} satisfies ExportedHandler<Env>;
+
+async function handleContactRequest(request: Request, env: Env) {
+  if (request.method === "OPTIONS") {
+    return new Response(null, { status: 204, headers: corsHeaders });
+  }
+
+  if (request.method !== "POST") {
+    return jsonResponse({ error: "Method not allowed." }, 405);
+  }
+
   const body = await request.json().catch(() => null);
   const validation = validateContactRequest(body);
 
@@ -41,7 +60,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     const message = error instanceof Error ? error.message : "Unable to send contact message.";
     return jsonResponse({ error: message }, 500);
   }
-};
+}
 
 function validateContactRequest(body: unknown): { ok: true; data: ContactRequest } | { ok: false; error: string } {
   if (!body || typeof body !== "object") {
