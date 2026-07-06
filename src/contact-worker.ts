@@ -90,12 +90,15 @@ function validateContactRequest(body: unknown): { ok: true; data: ContactRequest
 function getMissingSecrets(env: Env) {
   return [
     ["DISCORD_WEBHOOK_URL", env.DISCORD_WEBHOOK_URL],
-    ["GOOGLE_SERVICE_ACCOUNT_EMAIL", env.GOOGLE_SERVICE_ACCOUNT_EMAIL],
-    ["GOOGLE_PRIVATE_KEY", env.GOOGLE_PRIVATE_KEY],
-    ["GOOGLE_SHEET_ID", env.GOOGLE_SHEET_ID]
   ]
     .filter(([, value]) => !value)
     .map(([key]) => key);
+
+    /*
+    ["GOOGLE_SERVICE_ACCOUNT_EMAIL", env.GOOGLE_SERVICE_ACCOUNT_EMAIL],
+    ["GOOGLE_PRIVATE_KEY", env.GOOGLE_PRIVATE_KEY],
+    ["GOOGLE_SHEET_ID", env.GOOGLE_SHEET_ID]
+    */
 }
 
 async function sendDiscordMessage(data: ContactRequest, webhookUrl: string) {
