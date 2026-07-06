@@ -4,13 +4,22 @@ Notebook-inspired website for Biotech UTD, built with Next.js, Tailwind CSS, Typ
 
 ## Development
 
+Officer-editable content lives in `src/content`. Frontend code lives in `src/app`, `src/components`, and `src/lib`.
+Cloudflare Worker backend code lives in `src/backend`.
+
+If you just want to test the frontend,
+
 ```bash
 npm install
 npm run dev
 ```
 
-Officer-editable content lives in `src/content`. Frontend code lives in `src/app`, `src/components`, and `src/lib`.
-Cloudflare Worker backend code lives in `src/backend`.
+For local Worker testing, copy `.dev.vars.example` to `.dev.vars` and fill in the secret values. Then run:
+
+```bash
+npm run build
+npx wrangler dev
+```
 
 ## Cloudflare Secrets
 
