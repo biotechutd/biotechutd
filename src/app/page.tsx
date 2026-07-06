@@ -22,12 +22,12 @@ const programCards = [
 
 const gallerySlides = [
   {
-    src: "/images/ui/notebook-sample.svg",
+    src: "/images/gallery/notebook-sample.svg",
     alt: "Notebook-style placeholder for future Biotech UTD event photos.",
     title: "Gallery placeholder"
   },
   {
-    src: "/images/ui/notebook-sample-alt.svg",
+    src: "/images/gallery/notebook-sample-alt.svg",
     alt: "Notebook-style placeholder for future club workshop photos.",
     title: "Workshop placeholder"
   }

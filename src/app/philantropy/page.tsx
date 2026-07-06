@@ -5,12 +5,12 @@ import { getCommitteeContent } from "@/lib/content/getCommitteeContent";
 
 const gallerySlides = [
   {
-    src: "/images/ui/notebook-sample.svg",
+    src: "/images/gallery/notebook-sample.svg",
     alt: "Notebook-style placeholder for future Philantropy event photos.",
     title: "Philantropy gallery placeholder"
   },
   {
-    src: "/images/ui/notebook-sample-alt.svg",
+    src: "/images/gallery/notebook-sample-alt.svg",
     alt: "Notebook-style placeholder for future volunteer event photos.",
     title: "Volunteer event placeholder"
   }
