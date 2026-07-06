@@ -1,6 +1,6 @@
 name = "biotechutd"
 compatibility_date = "2026-05-26"
-main = "src/worker.ts"
+main = "src/contact-worker.ts"
 
 [assets]
 directory = "./out"

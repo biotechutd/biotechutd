@@ -53,7 +53,7 @@ async function handleContactRequest(request: Request, env: Env) {
 
   try {
     await sendDiscordMessage(validation.data, env.DISCORD_WEBHOOK_URL!);
-    await appendContactToSheet(validation.data, env);
+    //await appendContactToSheet(validation.data, env);
 
     return jsonResponse({ ok: true });
   } catch (error) {
