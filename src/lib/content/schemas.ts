@@ -37,6 +37,14 @@ export const gallerySchema = z.object({
 
 export type Gallery = z.infer<typeof gallerySchema>;
 
+export const bannerSchema = z.object({
+  enabled: z.boolean().default(false),
+  text: z.string().min(1),
+  href: z.string().min(1).optional()
+});
+
+export type Banner = z.infer<typeof bannerSchema>;
+
 const editableLinkSchema = z.object({
   label: z.string().min(1),
   href: z.string().min(1)
@@ -76,15 +84,35 @@ export const siteLinksSchema = z.object({
 });
 
 const applicationLinkSchema = z.object({
-  enabled: z.boolean(),
-  label: z.string().min(1),
-  url: z.string().min(1)
+  enabled: z.boolean().default(false),
+  label: z.string().min(1).default(""),
+  url: z.string().default("")
 });
+const disabledApplicationLink = { enabled: false, label: "", url: "" };
 
 export const applicationsSchema = z.object({
-  officer: applicationLinkSchema,
-  project: applicationLinkSchema,
-  member: applicationLinkSchema
+  officer: applicationLinkSchema.default(disabledApplicationLink),
+  project: applicationLinkSchema.default(disabledApplicationLink),
+  member: applicationLinkSchema.default(disabledApplicationLink),
+  cards: z
+    .array(
+      z.object({
+        enabled: z.boolean().default(true),
+        title: z.string().min(1),
+        description: z.string().min(1),
+        rotate: z.number().optional(),
+        actions: z
+          .array(
+            z.object({
+              visible: z.boolean().default(true),
+              label: z.string().min(1),
+              href: z.string().min(1)
+            })
+          )
+          .default([])
+      })
+    )
+    .default([])
 });
 
 export const eventsContentSchema = z.object({

@@ -69,10 +69,15 @@ projects:                   # Optional: project list.
 Path: `applications.yaml`
 
 ```yaml
-example:
-  enabled: false             # Required: whether this application is open.
-  label: Officer Applications # Required: button/link label.
-  url: https://example.com   # Required: application URL.
+cards:                       # Optional: cards shown on the join page.
+  - enabled: true            # Optional: whether this card is visible; defaults to true.
+    title: Projects          # Required: card title.
+    description: Apply now.  # Required: card description.
+    rotate: -0.5             # Optional: small visual tilt.
+    actions:                 # Optional: card buttons.
+      - visible: true        # Optional: whether this button is shown; defaults to true.
+        label: Apply         # Required per action: button text.
+        href: https://example.com # Required per action: button URL.
 ```
 
 ## Events
@@ -105,7 +110,7 @@ socials:
 Path: `banner.yaml`
 
 ```yaml
-enabled: true               # Whether to show the banner.
-text: GBM this Friday       # Banner message.
-href: /events               # Banner link.
+enabled: true               # Optional: whether to show the banner; defaults to false.
+text: GBM this Friday       # Required: banner message.
+href: /events               # Optional: banner link.
 ```

@@ -1,9 +1,11 @@
+import { AnnouncementBanner } from "@/components/layout/AnnouncementBanner";
 import { NotebookPage } from "@/components/notebook/NotebookPage";
 import { NotebookCard } from "@/components/notebook/NotebookCard";
 import { Taped } from "@/components/notebook/Taped";
 import { ImageSlideshow } from "@/components/sections/ImageSlideshow";
 import { NewsletterEmbed } from "@/components/sections/NewsletterEmbed";
 import { Button } from "@/components/ui/Button";
+import { getBanner } from "@/lib/content/getBanner";
 import { getGallery } from "@/lib/content/getGallery";
 
 const programCards = [
@@ -22,10 +24,11 @@ const programCards = [
 ];
 
 export default async function HomePage() {
-  const gallerySlides = await getGallery();
+  const [banner, gallerySlides] = await Promise.all([getBanner(), getGallery()]);
 
   return (
     <NotebookPage>
+      <AnnouncementBanner banner={banner} />
       <section className="mx-auto grid w-full max-w-7xl items-center gap-8 px-4 py-10 sm:px-6 md:py-16 lg:grid-cols-[minmax(0,1fr)_26rem] lg:px-20">
         <Taped
           rotate={1}

@@ -1,12 +1,13 @@
-officer:
-  enabled: false
-  label: Officer Applications
-  url: https://example.com
-project:
-  enabled: false
-  label: Project Applications
-  url: https://example.com
-member:
-  enabled: false
-  label: Member Interest Form
-  url: https://example.com
+# Cards shown on the /join page.
+cards: []
+# Example:
+# cards:
+#   - enabled: true
+#     title: Projects
+#     description: Apply to work on semester-long biotech projects.
+#     rotate: -0.5
+#     actions:
+#       - label: Project Application
+#         href: https://forms.gle/example
+#       - label: Team Interest Form
+#         href: https://forms.gle/example
