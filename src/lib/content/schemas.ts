@@ -7,7 +7,7 @@ export const officerFileSchema = z.object({
   slug: z.string().min(1),
   name: z.string().min(1),
   role: z.string().default(""),
-  order: z.number().int().nonnegative(),
+  order: z.number().int().nonnegative().default(999),
   featured: z.boolean().default(false),
   major: z.string().optional(),
   year: z.string().optional(),
@@ -22,6 +22,20 @@ export const officerSchema = officerFileSchema.extend({
 });
 
 export type Officer = z.infer<typeof officerSchema>;
+
+export const gallerySchema = z.object({
+  images: z
+    .array(
+      z.object({
+        name: z.string().min(1),
+        alt: z.string().min(1),
+        title: z.string().min(1).optional()
+      })
+    )
+    .default([])
+});
+
+export type Gallery = z.infer<typeof gallerySchema>;
 
 const editableLinkSchema = z.object({
   label: z.string().min(1),

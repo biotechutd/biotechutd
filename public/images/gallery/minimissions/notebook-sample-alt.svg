@@ -1,0 +1,10 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="750" fill="#FFFDF6"/>
+  <path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200M0 450H1200M0 540H1200M0 630H1200M0 720H1200" stroke="#2F5E83" stroke-opacity=".15" stroke-width="4"/>
+  <rect x="155" y="150" width="890" height="420" fill="#F5EDDA" stroke="#1F2933" stroke-width="18" stroke-dasharray="28 18"/>
+  <path d="M300 470C385 330 514 285 694 337C774 360 842 408 900 480" stroke="#376B52" stroke-width="26" stroke-linecap="round"/>
+  <circle cx="410" cy="290" r="54" fill="#B85C4A"/>
+  <circle cx="600" cy="260" r="54" fill="#2F5E83"/>
+  <circle cx="790" cy="300" r="54" fill="#376B52"/>
+  <text x="600" y="642" text-anchor="middle" fill="#1F2933" font-family="Comic Sans MS, cursive" font-size="44" font-weight="700">Event photo placeholder</text>
+</svg>

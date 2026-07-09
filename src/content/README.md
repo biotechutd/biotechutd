@@ -1,12 +1,111 @@
-# Officer-Editable Content
+# Website Content YAML Reference
 
-This folder is intended for public website content that officers may safely edit through GitHub.
+This folder contains public website content that can be edited through GitHub.
 
-- Edit officer cards in `officers/`.
-- Edit global social or club-wide links in `links.yaml`.
-- Edit application links in `applications.yaml`.
-- Edit committee-specific content in `committees/[committee-name]/content.yaml`.
-- Edit the temporary homepage banner in `banner.yaml`.
-- Edit gallery image references in `gallery.yaml`.
+Do not add passwords, webhook URLs, API keys, or private information here (duh).
 
-Do not put passwords, webhook URLs, API keys, or private information in this folder. Everything here should be treated as public.
+## Officers
+
+Path: `officers/[category]/[officer-name].yaml`
+
+Categories (for now): `executive`, `cs-engr`, `industry`, `philantropy`, `marketing`, `founders`
+
+```yaml
+name: Jane Doe              # Required: officer display name.
+role: Jester                # Optional: officer title or role.
+order: 1                    # Optional: display order; defaults to the end.
+featured: true              # Optional: highlight in featured layouts; defaults to false.
+major: Biology              # Optional: officer major.
+year: Senior                # Optional: officer year.
+image: /images/headshots/jane.jpg # Optional: image path; falls back if missing.
+email: jane@example.com     # Optional: valid email address.
+linkedin: https://linkedin.com/in/jane # Optional: valid LinkedIn URL.
+github: https://github.com/jane # Optional: valid GitHub URL.
+```
+
+## Named Galleries
+
+Path: `gallery/[gallery-name].yaml`
+
+Images go in: `public/images/gallery/[gallery-name]/`
+
+```yaml
+images:                     # Optional: list of gallery images.
+  - name: photo.jpg          # Required: filename inside this gallery folder.
+    alt: Students at event.  # Required: accessible image description.
+    title: Fall Kickoff      # Optional: caption shown under the slideshow.
+```
+
+If a gallery name is missing, invalid, or has no usable images, the site uses temporary fallback images.
+
+## Committees
+
+Path: `committees/[committee-name]/content.yaml`
+
+```yaml
+name: Projects              # Required: committee display name.
+enabled: true               # Required: whether this committee is active.
+hero:
+  eyebrow: Division          # Optional: small label; defaults to Division.
+  title: Projects            # Required: hero title.
+  summary: Short summary.    # Required: hero description.
+  cta:                       # Optional: primary hero link.
+    label: Get Involved      # Required if cta is used: link text.
+    href: /contact           # Required if cta is used: link URL.
+  projectDescription:        # Optional: project description link.
+    label: Project Details   # Required if used: link text.
+    href: https://example.com # Required if used: link URL.
+  links:                     # Optional: extra hero links.
+    - label: More Info       # Required per link: link text.
+      href: /events          # Required per link: link URL.
+projects:                   # Optional: project list.
+  - companyName: Company     # Optional: company name.
+    projectName: Project     # Optional: project name.
+    description: Summary.    # Optional: project description.
+```
+
+## Applications
+
+Path: `applications.yaml`
+
+```yaml
+example:
+  enabled: false             # Required: whether this application is open.
+  label: Officer Applications # Required: button/link label.
+  url: https://example.com   # Required: application URL.
+```
+
+## Events
+
+Path: `events.yaml`
+
+```yaml
+upcoming:                   # Required: list of upcoming events.
+  - title: Semester Kickoff  # Required: event title.
+    date: TBD               # Required: event date text.
+    description: Meet us.   # Required: short event description.
+```
+
+## Links
+
+Path: `links.yaml`
+
+```yaml
+socials:
+  github: https://github.com/ # Required: GitHub URL.
+  linkedin: https://linkedin.com/ # Required: LinkedIn URL.
+  email: biotechutd@gmail.com # Required: club email.
+  instagram: https://instagram.com/ # Optional: Instagram URL.
+  discord: https://discord.com/ # Optional: Discord URL.
+  linktree: https://linktr.ee/ # Optional: Linktree URL.
+```
+
+## Banner
+
+Path: `banner.yaml`
+
+```yaml
+enabled: true               # Whether to show the banner.
+text: GBM this Friday       # Banner message.
+href: /events               # Banner link.
+```

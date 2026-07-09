@@ -1,0 +1,7 @@
+images:
+  - name: notebook-sample.svg
+    alt: Notebook-style placeholder for future Philantropy event photos.
+    title: Philantropy gallery placeholder
+  - name: notebook-sample-alt.svg
+    alt: Notebook-style placeholder for future volunteer event photos.
+    title: Volunteer event placeholder

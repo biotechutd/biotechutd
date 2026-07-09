@@ -7,6 +7,6 @@ project:
   label: Project Applications
   url: https://example.com
 member:
-  enabled: true
+  enabled: false
   label: Member Interest Form
   url: https://example.com

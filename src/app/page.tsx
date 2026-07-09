@@ -4,6 +4,7 @@ import { Taped } from "@/components/notebook/Taped";
 import { ImageSlideshow } from "@/components/sections/ImageSlideshow";
 import { NewsletterEmbed } from "@/components/sections/NewsletterEmbed";
 import { Button } from "@/components/ui/Button";
+import { getGallery } from "@/lib/content/getGallery";
 
 const programCards = [
   {
@@ -20,20 +21,9 @@ const programCards = [
   }
 ];
 
-const gallerySlides = [
-  {
-    src: "/images/gallery/notebook-sample.svg",
-    alt: "Notebook-style placeholder for future Biotech UTD event photos.",
-    title: "Gallery placeholder"
-  },
-  {
-    src: "/images/gallery/notebook-sample-alt.svg",
-    alt: "Notebook-style placeholder for future club workshop photos.",
-    title: "Workshop placeholder"
-  }
-];
+export default async function HomePage() {
+  const gallerySlides = await getGallery();
 
-export default function HomePage() {
   return (
     <NotebookPage>
       <section className="mx-auto grid w-full max-w-7xl items-center gap-8 px-4 py-10 sm:px-6 md:py-16 lg:grid-cols-[minmax(0,1fr)_26rem] lg:px-20">
