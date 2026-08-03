@@ -50,7 +50,7 @@ export async function Footer() {
           ))}
         </div>
         <p className="max-w-xl text-sm leading-6 text-paper/70">
-          Biotech Club at The University of Texas at Dallas. Building, researching, and learning together.
+          Biotech Club at The University of Texas at Dallas.
         </p>
       </div>
     </footer>

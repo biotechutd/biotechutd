@@ -70,7 +70,7 @@ html {
 body {
   min-height: 100svh;
   margin: 0;
-  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", cursive, sans-serif;
+  font-family: "Comic Sans MS", "Comic Sans", sans-serif;
 }
 
 a {

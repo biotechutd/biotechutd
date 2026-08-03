@@ -1,9 +1,0 @@
-<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="640" height="480" fill="#F9FAFB"/>
-  <path d="M115 115H525V365H115V115Z" fill="#FFFEFC" stroke="#111111" stroke-width="8" stroke-dasharray="16 12"/>
-  <path d="M175 185H465" stroke="#111111" stroke-width="12" stroke-linecap="round"/>
-  <path d="M175 240H405" stroke="#3B82F6" stroke-width="12" stroke-linecap="round"/>
-  <path d="M175 295H455" stroke="#9CA3AF" stroke-width="12" stroke-linecap="round"/>
-  <path d="M220 82L420 58L430 113L230 137L220 82Z" fill="#FFFFC8" fill-opacity=".76" stroke="#111111" stroke-opacity=".12" stroke-width="4"/>
-  <text x="320" y="420" text-anchor="middle" fill="#111111" font-family="Comic Sans MS, cursive" font-size="28" font-weight="700">Applications opening soon</text>
-</svg>

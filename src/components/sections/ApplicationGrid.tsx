@@ -66,15 +66,6 @@ export function ApplicationGrid({ applications }: ApplicationGridProps) {
       ) : (
         <div className="mx-auto flex max-w-md flex-col items-center gap-6 text-center">
           <p className="text-lg text-ink/75">Check back later for applications.</p>
-          <div className="relative aspect-[4/3] w-full max-w-xs">
-            <Image
-              src="/images/applications/applications-placeholder.svg"
-              alt="Applications placeholder"
-              fill
-              sizes="20rem"
-              className="object-contain"
-            />
-          </div>
         </div>
       )}
     </section>
