@@ -24,7 +24,7 @@ export async function handleContactRequest(request: Request, env: Env) {
   }
 
   try {
-    await sendDiscordMessage(validation.data, env.DISCORD_WEBHOOK_URL!);
+    await sendDiscordMessage(validation.data, env.DISCORD_WEBHOOK_URL!, env.DISCORD_CONTACT_ROLE_ID);
     // Disabled because we need to setup 2factor auth.
     // await appendContactToSheet(validation.data, env);
 

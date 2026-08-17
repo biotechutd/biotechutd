@@ -81,6 +81,10 @@ hero:
   cta:                       # Optional: primary hero link.
     label: Get Involved      # Required if cta is used: link text.
     href: /contact           # Optional: link URL; button is hidden if blank.
+  links:                     # Optional: extra hero links.
+    - label: More Info       # Required per link: link text.
+      href: /events          # Required per link: link URL.
+  #Below only for Projects
   projectDescription:        # Optional: project description link.
     enabled: true            # Optional: whether to show it; defaults to false.
     label: Project Details   # Required if used: link text.
@@ -89,9 +93,7 @@ hero:
     enabled: true            # Optional: whether to show it; defaults to false.
     label: Apply             # Optional: button text; defaults to Apply.
     href: /join              # Optional: button URL; blank becomes #.
-  links:                     # Optional: extra hero links.
-    - label: More Info       # Required per link: link text.
-      href: /events          # Required per link: link URL.
+#Only for Projects
 projects:                   # Optional: project list.
   - companyName: Company     # Optional: company name.
     projectName: Project     # Optional: project name.

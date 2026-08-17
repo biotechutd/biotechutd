@@ -27,6 +27,7 @@ The contact form backend reads Worker secrets from Cloudflare. Add or update the
 
 ```bash
 npx wrangler secret put DISCORD_WEBHOOK_URL
+npx wrangler secret put DISCORD_CONTACT_ROLE_ID
 npx wrangler secret put GOOGLE_SERVICE_ACCOUNT_EMAIL
 npx wrangler secret put GOOGLE_PRIVATE_KEY
 npx wrangler secret put GOOGLE_SHEET_ID
