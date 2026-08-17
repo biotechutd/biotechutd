@@ -1,7 +1,6 @@
 # Copy this into `committees/[committee-name]/content.yaml` and uncomment the fields you need.
 
 # name: Committee Name
-# enabled: true
 
 # hero:
 #   eyebrow: Division
@@ -12,15 +11,6 @@
 #     label: Get Involved
 #     href: /contact
 #
-#   projectDescription:
-#     label: Project Description
-#     href: https://example.com
-#
 #   links:
 #     - label: Extra Link
 #       href: /events
-
-# projects:
-#   - companyName: Company Name
-#     projectName: Project Name
-#     description: Short project description.

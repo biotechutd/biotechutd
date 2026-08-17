@@ -70,9 +70,10 @@ join:
 
 Path: `committees/[committee-name]/content.yaml`
 
+Reference template: `committees/example-content.yaml`
+
 ```yaml
 name: Projects              # Required: committee display name.
-enabled: true               # Required: whether this committee is active.
 hero:
   eyebrow: Division          # Optional: small label; defaults to Division.
   title: Projects            # Required: hero title.
@@ -81,8 +82,13 @@ hero:
     label: Get Involved      # Required if cta is used: link text.
     href: /contact           # Optional: link URL; button is hidden if blank.
   projectDescription:        # Optional: project description link.
+    enabled: true            # Optional: whether to show it; defaults to false.
     label: Project Details   # Required if used: link text.
-    href: https://example.com # Required if used: link URL.
+    href: https://example.com # Optional: link URL; blank becomes #.
+  apply:                     # Optional: Projects page apply button.
+    enabled: true            # Optional: whether to show it; defaults to false.
+    label: Apply             # Optional: button text; defaults to Apply.
+    href: /join              # Optional: button URL; blank becomes #.
   links:                     # Optional: extra hero links.
     - label: More Info       # Required per link: link text.
       href: /events          # Required per link: link URL.

@@ -12,8 +12,21 @@ function isLinkButton(link: LinkButton | undefined): link is LinkButton {
 
 export default async function ProjectsPage() {
   const content = await getCommitteeContent("projects");
-  const descriptionButton = content.hero.projectDescription?.href ? content.hero.projectDescription : undefined;
-  const projectButtons = [descriptionButton].filter(isLinkButton);
+  const descriptionButton =
+    content.hero.projectDescription?.enabled
+      ? {
+          label: content.hero.projectDescription.label,
+          href: content.hero.projectDescription.href || "#"
+        }
+      : undefined;
+  const applyButton =
+    content.hero.apply?.enabled
+      ? {
+          label: content.hero.apply.label,
+          href: content.hero.apply.href || "#"
+        }
+      : undefined;
+  const projectButtons = [applyButton, descriptionButton].filter(isLinkButton);
 
   return (
     <NotebookPage>

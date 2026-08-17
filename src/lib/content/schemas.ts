@@ -56,6 +56,17 @@ const optionalEditableLinkSchema = z.object({
   href: z.string().default("")
 });
 
+const optionalToggleLinkSchema = z.object({
+  enabled: z.boolean().default(false),
+  label: z.string().min(1),
+  href: z.string().default("")
+});
+
+const applyLinkSchema = optionalToggleLinkSchema.extend({
+  label: z.string().min(1).default("Apply"),
+  href: z.string().default("/join")
+});
+
 export const homePageContentSchema = z.object({
   hero: z.object({
     title: z.string().min(1),
@@ -83,13 +94,13 @@ export const homePageContentSchema = z.object({
 
 export const committeeContentSchema = z.object({
   name: z.string().min(1),
-  enabled: z.boolean(),
   hero: z.object({
     eyebrow: z.string().min(1).default("Division"),
     title: z.string().min(1),
     summary: z.string().min(1),
     cta: optionalEditableLinkSchema.optional(),
-    projectDescription: optionalEditableLinkSchema.optional(),
+    projectDescription: optionalToggleLinkSchema.optional(),
+    apply: applyLinkSchema.optional(),
     links: z.array(editableLinkSchema).default([])
   }),
   projects: z

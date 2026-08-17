@@ -1,12 +1,16 @@
 name: Projects
-enabled: true
 hero:
   eyebrow: Division
   title: Projects
   summary: Projects are semester long and could potentially extend! Applications will be available at the beginning of each semester. We encourage all majors to apply and the projects are open to undergraduate and graduate students! Make sure to look at the detailed project descriptions below.
   projectDescription:
+    enabled: false
     label: Project Description
     href: ""
+  apply:
+    enabled: false
+    label: Apply
+    href: /join
 projects:
   - companyName: Adilabs
     projectName: ""
