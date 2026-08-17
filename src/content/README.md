@@ -38,6 +38,31 @@ images:                     # Optional: list of gallery images.
 
 If a gallery name is missing, invalid, or has no usable images, the site uses temporary fallback images.
 
+## Homepage
+
+Path: `home.yaml`
+
+```yaml
+hero:
+  title: THE BIOTECH CLUB   # Required: main homepage title.
+  summary: Short intro.     # Required: main homepage description.
+  links:                    # Optional: hero buttons.
+    - label: See Events     # Required per link: button text.
+      href: /events         # Required per link: button URL.
+newsletter:
+  title: Biotech Newsletter # Required: embedded newsletter title.
+  src: https://example.com  # Required: embedded newsletter URL.
+programCards:               # Optional: homepage program cards.
+  - title: Workshops        # Required: card title.
+    body: Learn with us.    # Optional: card body; can be empty.
+    cta:                    # Optional: card button.
+      label: Learn More     # Required if cta is used: button text.
+      href: /events         # Required if cta is used: button URL.
+join:
+  title: Join our Club      # Required: join section title.
+  body: Applications open.  # Required: join section body.
+```
+
 ## Committees
 
 Path: `committees/[committee-name]/content.yaml`

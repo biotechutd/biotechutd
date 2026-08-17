@@ -7,24 +7,10 @@ import { NewsletterEmbed } from "@/components/sections/NewsletterEmbed";
 import { Button } from "@/components/ui/Button";
 import { getBanner } from "@/lib/content/getBanner";
 import { getGallery } from "@/lib/content/getGallery";
-
-const programCards = [
-  {
-    title: "Workshops",
-    body: "Explore some of the workshops we offer and look out for upcoming learning opportunities!"
-  },
-  {
-    title: "Projects",
-    body: "They’re a great way to build your CS and engineering skills through workshops and an 8-week guided project."
-  },
-  {
-    title: "MiniMissions",
-    body: "TODO"
-  }
-];
+import { getHomePageContent } from "@/lib/content/getHomePageContent";
 
 export default async function HomePage() {
-  const [banner, gallerySlides] = await Promise.all([getBanner(), getGallery()]);
+  const [banner, gallerySlides, content] = await Promise.all([getBanner(), getGallery(), getHomePageContent()]);
 
   return (
     <NotebookPage>
@@ -38,40 +24,42 @@ export default async function HomePage() {
           ]}
         >
           <NotebookCard variant="dashed" className="px-6 py-10 sm:px-8 md:py-14">
-            <h1 className=" font-black leading-none text-black text-4xl">THE BIOTECH CLUB</h1>
+            <h1 className="text-4xl font-black leading-none text-black">{content.hero.title}</h1>
             <p className="mt-7 max-w-3xl text-xl font-semibold leading-8 text-black sm:text-2xl">
-              Bridging biomedical engineering, computer science, and healthcare innovation. Join us to build, research,
-              and solve real-world problems.
+              {content.hero.summary}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/events" className="-rotate-1">
-                See Events
-              </Button>
-              <Button href="/contact" className="rotate-1">
-                Join Us
-              </Button>
+              {content.hero.links.map((link, index) => (
+                <Button key={link.href} href={link.href} className={index % 2 === 0 ? "-rotate-1" : "rotate-1"}>
+                  {link.label}
+                </Button>
+              ))}
             </div>
           </NotebookCard>
         </Taped>
 
         <div className="hidden lg:block">
-          <NewsletterEmbed
-            title="Biotech Newsletter"
-            src="https://www.canva.com/design/DAG50nSTQJ0/9Kv5bx62Z17eW94pRf8m7w/view?embed"
-          />
+          <NewsletterEmbed title={content.newsletter.title} src={content.newsletter.src} />
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-20">
-        <div className="grid gap-5 md:grid-cols-3">
-          {programCards.map((card, index) => (
-            <Taped key={card.title} rotate={index - 1} tapes={[{ position: "top-center", rotate: index % 2 === 0 ? -8 : 7, width: 68 }]}>
-              <NotebookCard className="h-full">
+        <div className="grid items-stretch gap-5 md:grid-cols-3">
+          {content.programCards.map((card, index) => (
+            <Taped
+              key={card.title}
+              rotate={index - 1}
+              className="h-full"
+              tapes={[{ position: "top-center", rotate: index % 2 === 0 ? -8 : 7, width: 68 }]}
+            >
+              <NotebookCard className="flex h-full min-h-72 flex-col">
                 <h2 className="text-2xl font-black">{card.title}</h2>
-                <p className="mt-3 leading-7 text-ink/75">{card.body}</p>
-                <Button href="/events" className="mt-5 -rotate-1">
-                  Learn More
-                </Button>
+                <p className="mt-3 min-h-24 grow leading-7 text-ink/75">{card.body}</p>
+                {card.cta && (
+                  <Button href={card.cta.href} className="mt-auto w-fit -rotate-1">
+                    {card.cta.label}
+                  </Button>
+                )}
               </NotebookCard>
             </Taped>
           ))}
@@ -80,10 +68,8 @@ export default async function HomePage() {
 
       <section className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:px-20">
         <NotebookCard as="section" variant="dashed" rotate={-1} className="self-start">
-          <h2 className="text-3xl font-black">Join our Club</h2>
-          <p className="mt-3 leading-7 text-ink/75">
-Our semester-long mini internships accept applications at the beginning of each semester. Keep a look out for open positions on our two committees and leadership team.
-          </p>
+          <h2 className="text-3xl font-black">{content.join.title}</h2>
+          <p className="mt-3 leading-7 text-ink/75">{content.join.body}</p>
         </NotebookCard>
         <ImageSlideshow slides={gallerySlides} />
       </section>

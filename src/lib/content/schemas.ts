@@ -50,6 +50,31 @@ const editableLinkSchema = z.object({
   href: z.string().min(1)
 });
 
+export const homePageContentSchema = z.object({
+  hero: z.object({
+    title: z.string().min(1),
+    summary: z.string().min(1),
+    links: z.array(editableLinkSchema).default([])
+  }),
+  newsletter: z.object({
+    title: z.string().min(1),
+    src: z.string().min(1)
+  }),
+  programCards: z
+    .array(
+      z.object({
+        title: z.string().min(1),
+        body: z.string().default(""),
+        cta: editableLinkSchema.optional()
+      })
+    )
+    .default([]),
+  join: z.object({
+    title: z.string().min(1),
+    body: z.string().min(1)
+  })
+});
+
 export const committeeContentSchema = z.object({
   name: z.string().min(1),
   enabled: z.boolean(),
@@ -126,6 +151,7 @@ export const eventsContentSchema = z.object({
 });
 
 export type CommitteeContent = z.infer<typeof committeeContentSchema>;
+export type HomePageContent = z.infer<typeof homePageContentSchema>;
 export type SiteLinks = z.infer<typeof siteLinksSchema>;
 export type Applications = z.infer<typeof applicationsSchema>;
 export type EventsContent = z.infer<typeof eventsContentSchema>;

@@ -3,7 +3,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Biotech UTD",
-  description: "The student biotechnology club at The University of Texas at Dallas."
+  description: "The student biotechnology club at The University of Texas at Dallas.",
+  icons: {
+    icon: "/images/ui/bioTechSquareLogo.png",
+    apple: "/images/ui/bioTechSquareLogo.png"
+  }
 };
 
 export default function RootLayout({

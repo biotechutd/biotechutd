@@ -1,0 +1,30 @@
+hero:
+  title: THE BIOTECH CLUB
+  summary: Bridging biomedical engineering, computer science, and healthcare innovation. Join us to build, research, and solve real-world problems.
+  links:
+    - label: See Events
+      href: /events
+    - label: Join Us
+      href: /contact
+newsletter:
+  title: Biotech Newsletter
+  src: https://www.canva.com/design/DAG50nSTQJ0/9Kv5bx62Z17eW94pRf8m7w/view?embed
+programCards:
+  - title: Workshops
+    body: Explore some of the workshops we offer and look out for upcoming learning opportunities!
+    cta:
+      label: Learn More
+      href: /events
+  - title: Projects
+    body: They're a great way to build your CS and engineering skills through workshops and an 8-week guided project.
+    cta:
+      label: Learn More
+      href: /events
+  - title: MiniMissions
+    body: ""
+    cta:
+      label: Learn More
+      href: /events
+join:
+  title: Join our Club
+  body: Our semester-long mini internships accept applications at the beginning of each semester. Keep a look out for open positions on our two committees and leadership team.
