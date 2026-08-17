@@ -43,6 +43,8 @@ export async function Footer() {
               key={link.label}
               href={link.href}
               aria-label={link.label}
+              target="_blank"
+              rel="noopener noreferrer"
               className="grid size-10 place-items-center rounded-full bg-paper/10 text-paper transition hover:-translate-y-0.5 hover:bg-paper/20"
             >
               <FontAwesomeIcon icon={link.icon} className="size-4" />
