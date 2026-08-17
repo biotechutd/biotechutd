@@ -9,6 +9,11 @@ export type GallerySlide = {
   title?: string;
 };
 
+export type GalleryContent = {
+  slides: GallerySlide[];
+  autoAdvance: boolean;
+};
+
 const fallbackSlides: GallerySlide[] = [
   {
     src: "/images/gallery/notebook-sample.svg",
@@ -21,6 +26,10 @@ const fallbackSlides: GallerySlide[] = [
     title: "Workshop placeholder"
   }
 ];
+const fallbackGallery: GalleryContent = {
+  slides: fallbackSlides,
+  autoAdvance: true
+};
 
 const publicDirectory = path.join(process.cwd(), "public");
 
@@ -51,9 +60,9 @@ function isSafeImageName(name: string) {
   return !path.isAbsolute(name) && !name.includes("..") && !name.includes("/") && !name.includes("\\");
 }
 
-export async function getGallery(name?: string): Promise<GallerySlide[]> {
+export async function getGallery(name?: string): Promise<GalleryContent> {
   if (!name || !isSafeGalleryName(name)) {
-    return fallbackSlides;
+    return fallbackGallery;
   }
 
   try {
@@ -82,8 +91,11 @@ export async function getGallery(name?: string): Promise<GallerySlide[]> {
     );
     const existingSlides = slides.filter((slide): slide is GallerySlide => Boolean(slide));
 
-    return existingSlides.length > 0 ? existingSlides : fallbackSlides;
+    return {
+      slides: existingSlides.length > 0 ? existingSlides : fallbackSlides,
+      autoAdvance: gallery.autoAdvance
+    };
   } catch {
-    return fallbackSlides;
+    return fallbackGallery;
   }
 }

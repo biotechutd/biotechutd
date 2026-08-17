@@ -1,7 +1,10 @@
 images:
-  - name: notebook-sample.svg
-    alt: Notebook-style placeholder for future MiniMissions project photos.
-    title: MiniMissions gallery placeholder
-  - name: notebook-sample-alt.svg
-    alt: Notebook-style placeholder for future student build photos.
-    title: Student build placeholder
+  - name: minimissions-gallery-1.jpg
+    alt: MiniMissions participants working together.
+    title: MiniMissions photo 1
+  - name: minimissions-gallery-2.jpg
+    alt: MiniMissions participants working together.
+    title: MiniMissions photo 2
+  - name: minimissions-gallery-3.jpg
+    alt: MiniMissions participants working together.
+    title: MiniMissions photo 3

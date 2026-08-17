@@ -24,6 +24,7 @@ export const officerSchema = officerFileSchema.extend({
 export type Officer = z.infer<typeof officerSchema>;
 
 export const gallerySchema = z.object({
+  autoAdvance: z.boolean().default(true),
   images: z
     .array(
       z.object({
@@ -48,6 +49,11 @@ export type Banner = z.infer<typeof bannerSchema>;
 const editableLinkSchema = z.object({
   label: z.string().min(1),
   href: z.string().min(1)
+});
+
+const optionalEditableLinkSchema = z.object({
+  label: z.string().min(1),
+  href: z.string().default("")
 });
 
 export const homePageContentSchema = z.object({
@@ -82,8 +88,8 @@ export const committeeContentSchema = z.object({
     eyebrow: z.string().min(1).default("Division"),
     title: z.string().min(1),
     summary: z.string().min(1),
-    cta: editableLinkSchema.optional(),
-    projectDescription: editableLinkSchema.optional(),
+    cta: optionalEditableLinkSchema.optional(),
+    projectDescription: optionalEditableLinkSchema.optional(),
     links: z.array(editableLinkSchema).default([])
   }),
   projects: z

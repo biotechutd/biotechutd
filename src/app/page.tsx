@@ -10,7 +10,7 @@ import { getGallery } from "@/lib/content/getGallery";
 import { getHomePageContent } from "@/lib/content/getHomePageContent";
 
 export default async function HomePage() {
-  const [banner, gallerySlides, content] = await Promise.all([getBanner(), getGallery(), getHomePageContent()]);
+  const [banner, gallery, content] = await Promise.all([getBanner(), getGallery("home"), getHomePageContent()]);
 
   return (
     <NotebookPage>
@@ -71,7 +71,7 @@ export default async function HomePage() {
           <h2 className="text-3xl font-black">{content.join.title}</h2>
           <p className="mt-3 leading-7 text-ink/75">{content.join.body}</p>
         </NotebookCard>
-        <ImageSlideshow slides={gallerySlides} />
+        <ImageSlideshow slides={gallery.slides} autoAdvance={gallery.autoAdvance} />
       </section>
     </NotebookPage>
   );

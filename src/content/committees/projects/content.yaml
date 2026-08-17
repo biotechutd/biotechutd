@@ -6,7 +6,7 @@ hero:
   summary: Projects are semester long and could potentially extend! Applications will be available at the beginning of each semester. We encourage all majors to apply and the projects are open to undergraduate and graduate students! Make sure to look at the detailed project descriptions below.
   projectDescription:
     label: Project Description
-    href: https://example.com
+    href: ""
 projects:
   - companyName: Adilabs
     projectName: ""

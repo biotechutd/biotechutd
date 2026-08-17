@@ -29,7 +29,10 @@ Path: `gallery/[gallery-name].yaml`
 
 Images go in: `public/images/gallery/[gallery-name]/`
 
+Current galleries: `home`, `minimissions`, `philantropy`
+
 ```yaml
+autoAdvance: true           # Optional: automatically change slides; defaults to true.
 images:                     # Optional: list of gallery images.
   - name: photo.jpg          # Required: filename inside this gallery folder.
     alt: Students at event.  # Required: accessible image description.
@@ -76,7 +79,7 @@ hero:
   summary: Short summary.    # Required: hero description.
   cta:                       # Optional: primary hero link.
     label: Get Involved      # Required if cta is used: link text.
-    href: /contact           # Required if cta is used: link URL.
+    href: /contact           # Optional: link URL; button is hidden if blank.
   projectDescription:        # Optional: project description link.
     label: Project Details   # Required if used: link text.
     href: https://example.com # Required if used: link URL.

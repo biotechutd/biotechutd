@@ -6,13 +6,13 @@ import { getGallery } from "@/lib/content/getGallery";
 
 export default async function MiniMissionsPage() {
   const content = await getCommitteeContent("minimissions");
-  const gallerySlides = await getGallery("minimissions");
+  const gallery = await getGallery("minimissions");
 
   return (
     <NotebookPage theme="minimissions">
       <CommitteeHero content={content} rotate={1} />
       <section className="mx-auto w-full max-w-4xl px-4 py-10 sm:px-6 lg:px-20">
-        <ImageSlideshow slides={gallerySlides} />
+        <ImageSlideshow slides={gallery.slides} autoAdvance={gallery.autoAdvance} />
       </section>
     </NotebookPage>
   );

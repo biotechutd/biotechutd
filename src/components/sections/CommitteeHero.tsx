@@ -25,7 +25,7 @@ export function CommitteeHero({ content, rotate = 1 }: CommitteeHeroProps) {
           <h1 className="mt-2 text-5xl font-black leading-tight">{hero.title}</h1>
           <p className="mt-5 max-w-2xl text-xl leading-8 text-ink/75">{hero.summary}</p>
           <div className="mt-7 flex flex-wrap gap-3">
-            {hero.cta && (
+            {hero.cta?.href && (
               <Button href={hero.cta.href} className="-rotate-1">
                 {hero.cta.label}
               </Button>
