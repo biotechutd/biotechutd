@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { getSiteLinks } from "@/lib/content/getSiteLinks";
 
@@ -16,8 +16,9 @@ export async function Footer() {
   const socialLinks = [
     { href: siteLinks.socials.github, label: "GitHub", icon: faGithub },
     { href: siteLinks.socials.linkedin, label: "LinkedIn", icon: faLinkedin },
+    siteLinks.socials.discord ? { href: siteLinks.socials.discord, label: "Discord", icon: faDiscord } : undefined,
     { href: `mailto:${siteLinks.socials.email}`, label: "Email", icon: faEnvelope }
-  ];
+  ].filter((link): link is NonNullable<typeof link> => Boolean(link));
 
   return (
     <footer className="bg-ink px-4 py-10 text-paper sm:px-6">

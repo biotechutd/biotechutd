@@ -116,6 +116,22 @@ cards:                       # Optional: cards shown on the join page.
         href: https://example.com # Required per action: button URL.
 ```
 
+## Contact
+
+Path: `contact.yaml`
+
+```yaml
+heading:
+  eyebrow: Contact          # Optional: small page label; defaults to Contact.
+  title: Send us a note!    # Optional: main page heading.
+discord:
+  enabled: true             # Optional: whether to show the Discord note.
+  title: Join the Discord   # Required: Discord note title.
+  body: Casual updates.     # Required: Discord note body.
+  label: Join Discord       # Optional: button text; defaults to Join Discord.
+  href: https://discord.gg/ # Required: Discord invite URL.
+```
+
 ## Events
 
 Path: `events.yaml`

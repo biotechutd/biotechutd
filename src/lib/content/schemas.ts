@@ -125,6 +125,20 @@ export const siteLinksSchema = z.object({
   })
 });
 
+export const contactContentSchema = z.object({
+  heading: z.object({
+    eyebrow: z.string().min(1).default("Contact"),
+    title: z.string().min(1).default("Send us a note!")
+  }),
+  discord: z.object({
+    enabled: z.boolean().default(true),
+    title: z.string().min(1),
+    body: z.string().min(1),
+    label: z.string().min(1).default("Join Discord"),
+    href: z.string().url()
+  })
+});
+
 const applicationLinkSchema = z.object({
   enabled: z.boolean().default(false),
   label: z.string().min(1).default(""),
@@ -170,5 +184,6 @@ export const eventsContentSchema = z.object({
 export type CommitteeContent = z.infer<typeof committeeContentSchema>;
 export type HomePageContent = z.infer<typeof homePageContentSchema>;
 export type SiteLinks = z.infer<typeof siteLinksSchema>;
+export type ContactContent = z.infer<typeof contactContentSchema>;
 export type Applications = z.infer<typeof applicationsSchema>;
 export type EventsContent = z.infer<typeof eventsContentSchema>;

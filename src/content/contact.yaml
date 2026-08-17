@@ -1,0 +1,9 @@
+heading:
+  eyebrow: Contact
+  title: Send us a note!
+discord:
+  enabled: true
+  title: Join the Discord
+  body: For casual updates, announcements, and club community, hop into our Discord too.
+  label: Join Discord
+  href: https://discord.gg/zaxkGTjkHc

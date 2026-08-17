@@ -16,7 +16,7 @@ type ImageSlideshowProps = {
   autoAdvanceIntervalMs?: number;
 };
 
-export function ImageSlideshow({ slides, autoAdvance = true, autoAdvanceIntervalMs = 5000 }: ImageSlideshowProps) {
+export function ImageSlideshow({ slides, autoAdvance = true, autoAdvanceIntervalMs = 8000 }: ImageSlideshowProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeSlide = slides[activeIndex];
   const hasMultipleSlides = slides.length > 1;

@@ -15,20 +15,20 @@ export default async function HomePage() {
   return (
     <NotebookPage>
       <AnnouncementBanner banner={banner} />
-      <section className="mx-auto grid w-full max-w-7xl items-center gap-8 px-4 py-10 sm:px-6 md:py-16 lg:grid-cols-[minmax(0,1fr)_26rem] lg:px-20">
+      <section className="mx-auto grid w-full max-w-7xl items-center gap-8 px-4 py-10 sm:px-6 md:py-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(30rem,1.2fr)] lg:px-20">
         <Taped
-          rotate={1}
+          rotate={-1}
           tapes={[
             { position: "top-left", rotate: -9, width: 86, offsetX: 8 },
             { position: "top-right", rotate: 8, width: 86, offsetX: -8 }
           ]}
         >
-          <NotebookCard variant="dashed" className="px-6 py-10 sm:px-8 md:py-14">
-            <h1 className="text-4xl font-black leading-none text-black">{content.hero.title}</h1>
-            <p className="mt-7 max-w-3xl text-xl font-semibold leading-8 text-black sm:text-2xl">
+          <NotebookCard variant="dashed" className="px-6 py-8 sm:px-7 md:py-10">
+            <h1 className="text-3xl font-bold leading-none text-black sm:text-4xl">{content.hero.title}</h1>
+            <p className="mt-5 max-w-3xl text-base font-normal leading-7 text-ink/80 sm:text-lg">
               {content.hero.summary}
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               {content.hero.links.map((link, index) => (
                 <Button key={link.href} href={link.href} className={index % 2 === 0 ? "-rotate-1" : "rotate-1"}>
                   {link.label}
@@ -38,8 +38,8 @@ export default async function HomePage() {
           </NotebookCard>
         </Taped>
 
-        <div className="hidden lg:block">
-          <NewsletterEmbed title={content.newsletter.title} src={content.newsletter.src} />
+        <div>
+          <ImageSlideshow slides={gallery.slides} autoAdvance={gallery.autoAdvance} />
         </div>
       </section>
 
@@ -66,12 +66,12 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:px-20">
+      <section className="mx-auto grid w-full max-w-7xl items-start gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:px-20">
         <NotebookCard as="section" variant="dashed" rotate={-1} className="self-start">
           <h2 className="text-3xl font-black">{content.join.title}</h2>
           <p className="mt-3 leading-7 text-ink/75">{content.join.body}</p>
         </NotebookCard>
-        <ImageSlideshow slides={gallery.slides} autoAdvance={gallery.autoAdvance} />
+        <NewsletterEmbed title={content.newsletter.title} src={content.newsletter.src} className="mx-auto w-full max-w-[18rem] sm:max-w-[20rem] lg:max-w-none" />
       </section>
     </NotebookPage>
   );
