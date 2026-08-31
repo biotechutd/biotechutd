@@ -2,8 +2,6 @@
 
 This folder contains public website content that can be edited through GitHub.
 
-Do not add passwords, webhook URLs, API keys, or private information here (duh).
-
 ## Officers
 
 Path: `officers/[category]/[officer-name].yaml`
