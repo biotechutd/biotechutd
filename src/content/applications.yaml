@@ -11,3 +11,31 @@ cards: []
 #         href: https://forms.gle/example
 #       - label: Team Interest Form
 #         href: https://forms.gle/example
+cards:
+  - enabled: true
+    title: MiniMissions Instructor
+    description: Guide students through completing a mini-project of your creation/choice by teaching a series of workshops throughout the semester.
+    actions:
+      - label: Apply Now
+        href: https://docs.google.com/forms/d/e/1FAIpQLSeAcru7yF0Q5_3Zm10Bb0dp9MRZGQbFo4UPv3veInVyGc6xsQ/viewform
+
+  - enabled: true
+    title: Workshop Team Application
+    description: Help organize and lead workshops in collaboration with other student organizations throughout the semester.
+    actions:
+      - label: Apply Now
+        href: https://docs.google.com/forms/d/e/1FAIpQLSfZiMrymdgV1iDBuCgLhx3oglJGj_sMztBcFuVIK3GOv9nurg/viewform
+
+  - enabled: true
+    title: Industry Committee
+    description: Lead outreach to our industry partners and communicate with them to understand project needs.
+    actions:
+      - label: Apply Now
+        href: https://docs.google.com/forms/d/e/1FAIpQLSeB6NDWMpBKd8SFwMLs4rvBDayawv40LzxpSPKsEpMlqdRFFA/viewform
+
+  - enabled: true
+    title: Philanthropy Committee
+    description: Design and implement interactive programs, including workshops, speaker events, and hands-on demonstrations, that are tailored to different age groups and community needs.
+    actions:
+      - label: Apply Now
+        href: https://docs.google.com/forms/d/e/1FAIpQLSeM6IsnkjIMnoCLTn78nqCanzPOaAhFrxBmoWu4fR0j1kJ91Q/viewform
