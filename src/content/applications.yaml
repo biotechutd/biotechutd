@@ -1,5 +1,5 @@
 # Cards shown on the /join page.
-cards: []
+#cards: [] <- this is when there are no cards
 # Example:
 # cards:
 #   - enabled: true
