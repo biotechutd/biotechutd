@@ -1,32 +1,26 @@
-name: Projects
+name: Mini Internships
 hero:
   eyebrow: Division
-  title: Projects
-  summary: Projects are semester long and could potentially extend! Applications will be available at the beginning of each semester. We encourage all majors to apply and the projects are open to undergraduate and graduate students! Make sure to look at the detailed project descriptions below.
+  title: Mini Internships
+  summary: Mini Internships are semester long and could potentially extend! Applications will be available at the beginning of each semester. We encourage all majors to apply and the projects are open to undergraduate and graduate students! Make sure to look at the detailed project descriptions below.
   projectDescription:
-    enabled: false
+    enabled: true
     label: Project Description
-    href: ""
+    href: https://docs.google.com/document/d/1cjdXv2Al8QAwmDDWvCpmWFHLap4DAb9y6qtpooTCXTU/edit?tab=t.0
   apply:
-    enabled: false
+    enabled: true
     label: Apply
     href: /join
 projects:
-  - companyName: Adilabs
+  - companyName: BetaQuest Theranostics
+    projectName: Target Product Profile for a Betabody-Based Radiotheranostic
+    description: Create an evidence-based, preliminary target product profile (TPP) for BetaQuest Theranostics' lead Betabody radiotheranostic program in colorectal cancer with peritoneal metastasis (CRC-PM).
+  - companyName: Milo Lin Lab
     projectName: ""
-    description: Rare disease care is often fragmented and reactive, leaving clinicians without visibility into disease progression, therapy response, or safety. Adilabs addresses this by giving clinicians a comprehensive view to enable timely, informed intervention.
-  - companyName: Sapiens Labs
-    projectName: ""
-    description: Sapien Labs is seeking two research interns (full stack developers) to assist with the development of a lightweight web/app-based prototype.
-  - companyName: Colossal
-    projectName: ""
-    description: This project focuses on enhancing a biomedical knowledge graph and LLM-powered chatbot to improve biological knowledge discovery. The system is extended and evaluated using Neo4j-based graph construction and structured testing.
-  - companyName: Nesteva
-    projectName: ""
-    description: Nestéva is a maternal health technology concept aimed at improving pregnancy and postpartum outcomes through a wearable-enabled digital platform. This project focuses on researching and prototyping a system that identifies and evaluates maternal biomarkers for continuous wearable-based monitoring.
-  - companyName: Cosnetix
-    projectName: ""
-    description: Modern skincare recommendations rarely account for the unique microbial ecosystems of individual skin. Cosnetix addresses this gap by building a foundational microbiota database and a proof-of-concept system that integrates microbial insights to enhance personalized skincare.
-  - companyName: Omnispectra
-    projectName: ""
-    description: PFAS are persistent environmental contaminants typically detected using invasive, costly laboratory techniques. This project investigates the feasibility of RF sensing to detect PFAS and selected precursors by correlating RF dielectric and resonant signatures with PFAS presence and concentration.
+    description: Discover the key learning principles that enable scalable neural evolution. Devise a scalable local autonomous network algorithm for evolution of neural network to learn general-purpose tasks.
+  - companyName: MPM Medical
+    projectName: Pressure Transmission Through MPM Collagen Matrices During Simulated NPWT
+    description: MPM Medical currently lacks a standardized bench dataset describing how its collagen matrix behaves under NPWT conditions. The team will reproduce the core experimental approach reported by Veale et al. using an independently constructed benchtop system and MPM test articles.
+  - companyName: Jibe Therapeutics
+    projectName: uTCE T Cell Activation Screen
+    description: Jibe has generated a panel of uTCE candidates designed to redirect T cells against solid tumors without relying on a single tumor-restricted target antigen. Before advancing any candidate further, Jibe needs to know which uTCE(s) activate T cells most effectively, and how consistently that activity holds up across  tumor types.

@@ -13,6 +13,15 @@
 #         href: https://forms.gle/example
 cards:
   - enabled: true
+    title: Mini Internships F26
+    description: Apply to work on semester-long biotech projects.
+    actions:
+      - label: Apply Now 
+        href: https://docs.google.com/forms/d/e/1FAIpQLSePQ8uslEVvZronxRJmJH99dyuvJiISHbovzV1Q-ZBnD1w_MA/viewform
+      - label: Project description
+        href: https://docs.google.com/document/d/1cjdXv2Al8QAwmDDWvCpmWFHLap4DAb9y6qtpooTCXTU/edit?tab=t.0
+
+  - enabled: true
     title: MiniMissions Instructor
     description: Guide students through completing a mini-project of your creation/choice by teaching a series of workshops throughout the semester.
     actions:
