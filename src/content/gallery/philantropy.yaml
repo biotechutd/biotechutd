@@ -1,4 +1,19 @@
 images:
-  - name: notebook-sample.svg
-    alt: Notebook-style placeholder for future Philantropy event photos.
-    title: Coming soon!
+  - name: p1.jpg
+    alt: Pitch Competition with Hockaday Seniors
+    title: Pitch Competition with Hockaday Seniors
+  - name: p2.jpg
+    alt: Frisco Library Community Science Night
+    title: Frisco Library Community Science Night
+  - name: p3.jpg
+    alt: "AI: Myths, Reality, and Real-World Impact @ Highland Park Library"
+    title: "AI: Myths, Reality, and Real-World Impact @ Highland Park Library"
+  - name: p4.jpg
+    alt: Medical Imaging Workshop @ Frisco Library
+    title: Medical Imaging Workshop @ Frisco Library
+  - name: p5.jpg
+    alt: Student Panel & Speaker Event @ Berkner High School
+    title: Student Panel & Speaker Event @ Berkner High School
+  - name: p6.jpg
+    alt: Introduction to Bioengineering with Noorishment @ Ma'ruf Dallas
+    title: Introduction to Bioengineering with Noorishment @ Ma'ruf Dallas
