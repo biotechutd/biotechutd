@@ -12,7 +12,7 @@
 #       - label: Team Interest Form
 #         href: https://forms.gle/example
 cards:
-  - enabled: true
+  - enabled: false
     title: Mini Internships F26
     description: Apply to work on semester-long biotech projects.
     actions:
